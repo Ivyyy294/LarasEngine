@@ -10,7 +10,7 @@ std::string LarasEngine::InputDialog::GetInput (const QString& text)
 	LarasEngine::InputDialog d (text, val);
 	d.exec ();
 
-	return val.toLatin1 ();
+	return (std::string) val.toLatin1 ();
 }
 
 void LarasEngine::InputDialog::ReadJson (const QJsonObject& json)
